@@ -1,0 +1,20 @@
+---
+
+- name: yum install postgresql96
+  command : yum install postgresql-server -y
+  
+ 
+- name: yum install postgresql old version 
+  command : yum install postgresql-contrib -y
+
+- name: setup db
+  command : postgresql-setup initdb
+
+- name: start postgres
+  command : sudo systemctl start postgresql
+
+- name : enable postgres
+  command : sudo systemctl enable postgresql
+
+- name : install python-psycopg2
+  command : yum install python-psycopg2
