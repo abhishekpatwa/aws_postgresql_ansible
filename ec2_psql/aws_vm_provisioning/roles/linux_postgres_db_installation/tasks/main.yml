@@ -1,9 +1,10 @@
 ---
 
 - name: yum install postgresql96
-  command : sudo yum install postgresql-server -y
-  
- 
+  yum : 
+   name: postgresql-server
+   state: present
+   
 - name: yum install postgresql old version 
   command : sudo yum install postgresql-contrib -y
 
