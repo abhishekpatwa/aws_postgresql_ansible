@@ -16,6 +16,7 @@
   become_user: root
   become_method: sudo
   roles:
-    - linux_postgres_db_cretion
     - linux_postgres_db_installation
+    - linux_postgres_db_cretion
+    
 
