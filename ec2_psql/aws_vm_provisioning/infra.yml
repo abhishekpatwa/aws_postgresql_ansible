@@ -11,6 +11,7 @@
 
 - name: Install Postgresql
   hosts: NewServer
+  gather_facts: false
   become: yes
   become_method: sudo
   roles:
