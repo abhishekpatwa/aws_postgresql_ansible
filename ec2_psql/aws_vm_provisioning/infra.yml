@@ -14,7 +14,7 @@
   become: yes
   become_user: root
   become_method: sudo
-  remote_user: root
+  remote_user: ec2-user
   roles:
     - linux_postgres_db_installation
     - linux_postgres_db_cretion
