@@ -11,9 +11,9 @@
 
 - name: Install Postgresql
   hosts: NewServer
-  remote_user: root
+  remote_user: ec2-user
   become: yes
-  become_user: ec2-user
+  become_user: root
   become_method: sudo
   roles:
     - linux_postgres_db_installation
