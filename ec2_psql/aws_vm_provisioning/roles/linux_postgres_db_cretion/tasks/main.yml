@@ -2,11 +2,18 @@
 # tasks file for linux_postgres_db_creation
 
 
-- name: Ensure the PostgreSQL service is runnin
-  service:
-    name: postgresql
-    state: stopped
+#- name: Ensure the PostgreSQL service is runnin
+#  service:
+#    name: postgresql
+#    state: stopped
 
+- name: Stop Postgresql Service
+  command: "sudo systemctl stop postgresql"
+  register: Output
+
+- debug: var=Output
+
+ 
 - replace:
     path: /var/lib/pgsql/data/pg_hba.conf
     regexp: 'peer'
