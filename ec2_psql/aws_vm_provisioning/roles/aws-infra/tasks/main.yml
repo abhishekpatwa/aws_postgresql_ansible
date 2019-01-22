@@ -23,7 +23,7 @@
 - add_host: 
       name: "{{item['public_ip']}}"  
       groups: NewServer
-      ansible_ssh_private_key_file: "/home/abhishek.patwa-atos.net/aws_postgresql_ansible/ec2_psql/aws_vm_provisioning/roles"
+      ansible_ssh_private_key_file: "/home/abhishek.patwa-atos.net/aws_postgresql_ansible/ec2_psql/aws_vm_provisioning/roles/NewPrivateKey.pem"
   with_items: "{{ec2.instances}}" 
 
 - name: wait for the instances to boot by checking the ssh port
