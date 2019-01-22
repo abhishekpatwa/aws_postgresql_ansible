@@ -4,6 +4,8 @@
   yum : 
    name: postgresql-server
    state: present
+  become: yes
+  become_user: root
    
 - name: yum install postgresql old version 
   command : sudo yum install postgresql-contrib -y
