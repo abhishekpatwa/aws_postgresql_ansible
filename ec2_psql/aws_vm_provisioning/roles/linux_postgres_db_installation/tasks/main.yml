@@ -1,5 +1,8 @@
 ---
 
+- name: Make Yourself a admin User
+  command: sudo -i
+
 - name: yum install postgresql96
   yum : 
    name: postgresql-server
