@@ -22,7 +22,7 @@
  
 - name: Setup Db
   become: yes
-  become_user: postgres
+  become_user: root
   command: postgresql-setup initdb
 
 - name: Start PostgreService
