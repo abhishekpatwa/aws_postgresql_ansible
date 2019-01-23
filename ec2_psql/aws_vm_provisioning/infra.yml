@@ -10,7 +10,7 @@
 
 
 - name: Install Postgresql
-  hosts: all
+  hosts: NewServer
   gather_facts: false
   become: yes
   become_method: sudo
