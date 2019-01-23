@@ -13,9 +13,9 @@
    state: present
   become: yes
   become_user: root
-   
-- name: setup db
-  command : postgresql-setup initdb
+ 
+- name: Setup Db
+  shell: postgresql-setup initdb
 
 - name: Start PostgreService
   systemd:
