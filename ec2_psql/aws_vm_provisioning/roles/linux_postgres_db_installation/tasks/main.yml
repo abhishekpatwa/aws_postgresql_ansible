@@ -15,11 +15,7 @@
   become_user: root
    
 - name: setup db
-  yum : 
-   name: postgresql-setup
-   state: present
-  become: yes
-  become_user: root
+  command : postgresql-setup initdb
 
 - name: Start PostgreService
   systemd:
