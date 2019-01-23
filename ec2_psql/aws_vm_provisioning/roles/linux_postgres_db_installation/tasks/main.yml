@@ -3,9 +3,8 @@
 - name: yum install download packgaes
   become: yes
   become_user: root
-  yum : 
-   name: https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/pgdg-centos11-11-2.noarch.rpm
-   state: present
+  command: yum install https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/pgdg-centos11-11-2.noarch.rpm
+  
   
 - name: yum install postgresql96
   yum : 
