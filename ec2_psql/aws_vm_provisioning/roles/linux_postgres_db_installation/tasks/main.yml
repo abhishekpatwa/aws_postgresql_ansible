@@ -3,14 +3,14 @@
 - name: yum install postgresql96
   yum : 
    name: postgresql-server
-   state: latest
+   state: present
   become: yes
   become_user: root
    
 - name: yum install postgresql old version 
   yum : 
    name: postgresql-contrib
-   state: latest
+   state: present
   become: yes
   become_user: root
  
@@ -32,6 +32,6 @@
 - name: install python-psycopg2
   yum : 
    name: python-psycopg2
-   state: latest
+   state: present
   become: yes
   become_user: root
