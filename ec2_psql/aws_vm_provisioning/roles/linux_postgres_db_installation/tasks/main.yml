@@ -19,8 +19,8 @@
     dest: /opt
   
 - name: yum install downloaded
-  yum : 
-   name: pgdg-centos11-11-2.noarch.rpm
+  package:
+   name: /opt/pgdg-centos11-11-2.noarch.rpm
    state: present
   become: yes
   become_user: root  
