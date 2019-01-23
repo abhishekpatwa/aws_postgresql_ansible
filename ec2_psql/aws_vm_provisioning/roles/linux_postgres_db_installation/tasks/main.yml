@@ -16,8 +16,8 @@
  
 - name: Setup Db
   become: yes
-  become_user: root
-  shell: postgresql-setup initdb
+  become_user: postgres
+  command: postgresql-setup initdb
 
 - name: Start PostgreService
   systemd:
