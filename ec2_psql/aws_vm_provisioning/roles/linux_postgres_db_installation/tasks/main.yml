@@ -1,10 +1,13 @@
 ---
 - name: yum install postgresql96
-  command : yum install postgresql-server -y
-  
+  yum: 
+    name: postgresql-server
+    state: present
  
 - name: yum install postgresql old version 
-  command : yum install postgresql-contrib -y
+  yum:
+    name: postgresql-contrib
+    state: present
 
 - name: setup db
   command : postgresql-setup initdb
