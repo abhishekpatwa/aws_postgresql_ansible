@@ -12,7 +12,7 @@
   become_user: postgres
   register: opt
   
-- debug: var= opt
+- debug: var=opt
  
 - replace:
     path: /var/lib/pgsql/data/pg_hba.conf
