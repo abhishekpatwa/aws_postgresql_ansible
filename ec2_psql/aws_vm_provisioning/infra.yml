@@ -14,8 +14,14 @@
   gather_facts: false
   become: yes
   become_method: sudo
-  roles:
-    - linux_postgres_db_installation
-    - linux_postgres_db_cretion
-    
+  #roles:
+  #  - linux_postgres_db_installation
+  #  - linux_postgres_db_cretion
+  tasks:
+   
+     - name: Install Java
+       yum:
+         name: java
+         state: present
+       become_method: sudo
 
