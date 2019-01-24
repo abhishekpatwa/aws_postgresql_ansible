@@ -1,16 +1,17 @@
 ---
+
+
+- name: Install Java
+  command: sudo yum install java -y
+
 - name: yum install postgresql96
-  yum: 
-    name: postgresql-server
-    state: present
- 
-- name: yum install postgresql old version 
-  yum:
-    name: postgresql-contrib
-    state: present
+  command : sudo yum install postgresql-server -y
+
+- name: yum install postgresql old version
+  command : sudo yum install postgresql-contrib -y
 
 - name: setup db
-  command : postgresql-setup initdb
+  command : sudo postgresql-setup initdb
 
 - name: start postgres
   command : sudo systemctl start postgresql
@@ -19,4 +20,6 @@
   command : sudo systemctl enable postgresql
 
 - name : install python-psycopg2
-  command : yum install python-psycopg2
+  command : sudo yum install python-psycopg2 -y
+
+
