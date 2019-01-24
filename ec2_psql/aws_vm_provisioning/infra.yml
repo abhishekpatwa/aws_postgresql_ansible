@@ -24,4 +24,5 @@
          name: java
          state: present
        become_method: sudo
+       become_user: root
 
