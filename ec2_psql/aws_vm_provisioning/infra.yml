@@ -19,10 +19,7 @@
   #  - linux_postgres_db_cretion
   tasks:
    
-     - name: Install Java
-       yum:
-         name: java
-         state: present
-       become_method: sudo
-       become_user: root
+     - name: Check Hostname
+       shell: whoami
+     
 
