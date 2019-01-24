@@ -16,17 +16,8 @@
   become_user: ec2-user
   remote_user: ec2-user
   become_method: sudo
-  #roles:
-  #  - linux_postgres_db_installation
-  #  - linux_postgres_db_cretion
-  tasks:
-     - name: Check Hostname
-       shell: whoami && ifconfig
-       register: output
-      
-     - debug: var=output
-   
-     - name: Install Java
-       shell: sudo yum install java
+  roles:
+    - linux_postgres_db_installation
+    - linux_postgres_db_cretion
      
 
